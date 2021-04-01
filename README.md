@@ -1,18 +1,24 @@
-## Simple State Machine
+## BimmerWorld
 #### by Katrina Monje
 
 
 ### Overview
-This is an Interaction Design Course assignment exploring simple state machines.
+This is an Interaction Design Course project about how posting on social media makes us feel on a daily. This project aims to explore state machines and navigating between screens.
 
-### Rules for Modifying the Template
+The story follows a young girl who wants to share her story—finally getting her dream car through hard work and patience.
 
-(1) Add your own PNG files in the assets folder. Make sure they match the names ***exactly*** of the existing PNGs.
+Created in p5.js, this project is a simulation that aims to bring awareness on how small decisions of publicizing hand-picked moments in our daily lives affect our overall well-being and the way we perceive ourselves, how we want to be perceived, as well as how it actually reflects on other people’s perception of us. It intends to teach young adults and teens the importance of “Dopamine Detox” — the idea that every now and then, we need to get off our phones from time to time, as we fail to admit how much notifications and likes (or lack thereof) affects our mental health. 
+##
 
-(2) Add custom drawing code to drawOne(), drawTwo(), drawThree(), drawFour(), drawFive()
+### Technical Details
+The user interaction relies on navigation keys such as the left, right, up, and down arrow keys for choosing different options in certain screens, the enter key in order to advance to the next screen, and the r key to reset the game. The code is based on 28 different states: some states (screens) will prompt the player to make decisions that will determine the outcome of the story. The main abstraction strategy I used are array of arrays and defining functions that display each screen in an organized way. Credit goes to Kathleen Monje (my sister) who helped me learn how to do 2D arrays. 
 
-(3) You can add your own interfaces - keys, mouse events, etc in the Interfaces section
+The assets folder contains any image files for icons, backgrounds, fonts, and other elements used in the project.
 
-Don't change anything else! 
+The development folder includes project files with the code structure, initial brainstorming sketches, and the state machine I created for easier abstraction of the project.  
 
-### How it works
+Prototype (Adobe XD)
+The AdobeXD file consists of the 28 screens as aa mockup of the code and storyline, which is in the link below:
+ 
+
+
