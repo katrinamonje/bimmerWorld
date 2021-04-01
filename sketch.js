@@ -76,38 +76,177 @@ let messageMeh = 26;
 let messageSad = 27;
 let playAgain = 28;
 
-// Assets (images)
+// Displays splash screen
+var currentScreen = hook;
 
-let  = 0;
-let  = 1;
-let = 2;
-let = 3;
-let = 4;
-let = 5;
-let = 6;
-let = 7;
-let = 8;
-let = 9;
-let = 10;
-let = 11;
-let = 12;
-let = 13;
-let = 14;
-let = 15;
-let = 16;
-let = 17;
-let = 18;
-let = 19;
-let = 20;
-let = 21;
-let = 22;
-let = 23;
-let = 24;
-let = 25;
-let = 26;
-let = 27;
-let = 28;
+// Assets (images), indexed in order of appearance
 
+let enterKey = 0;
+let selfie = 1;
+let keys = 2;
+let arrowKey = 3;
+let chooseCaptionBrandish = 4;
+let chooseCaptionHeartfelt = 5;
+let captionBrandish = 6;
+let captionHeartfelt = 7;
+let notifications = 8;
+let noNotifications = 9;
+let chooseIGStoryBrandish = 10;
+let chooseIGStoryHeartfelt = 11;
+let yKey = 12;
+let nKey = 13;
+let deletePostOption = 14;
+let brandishIGStory = 15;
+let heartfeltIGStory = 16;
+let sadComment = 17;
+let happyComment = 18;
+let happyText = 19;
+let happyCommentTwo = 20;
+let emotionMeter = 21;
+let emotionMeterMeh = 22;
+let emotionMeterHappy = 23;
+let emotionMeterExcited = 24;
+let emotionMeterSad = 25;
+let emotionMeterAnxious = 26;
+let messageBackground = 27;
+
+// Properties of images
+
+let file = 0;
+let x = 1;
+let y = 2; 
+
+assets[enterKey] = ['assets/enterKey.png', xCenter, yCenter];
+assets[selfie] = ['assets/selfie.png', xCenter, yCenter];
+assets[keys] = ['assets/keys.png', xCenter, yCenter];
+assets[arrowKey] = ['assets/arrowKey.png', xCenter, yCenter];
+assets[chooseCaptionBrandish] = ['assets/chooseCaptionBrandish.png', xCenter, yCenter];
+assets[chooseCaptionHeartfelt] = ['assets/chooseCaptionHeartfelt.png', xCenter, yCenter];
+assets[captionBrandish] = ['assets/captionBrandish.png', xCenter, yCenter];
+assets[captionHeartfelt] = ['assets/captionHeartfelt.png', xCenter, yCenter];
+assets[notifications] = ['assets/notifications.png', xCenter, yCenter];
+assets[noNotifications] = ['assets/noNotifications.png', xCenter, yCenter];
+assets[chooseIGStoryBrandish] = ['assets/chooseIGStoryBrandish.png', xCenter, yCenter];
+assets[chooseIGStoryHeartfelt] = ['assets/chooseIGStoryHeartfelt.png', xCenter, yCenter];
+assets[yKey] = ['assets/yKey.png', xCenter, yCenter];
+assets[nKey] = ['assets/nKey.png', xCenter, yCenter];
+assets[deletePostOption] = ['assets/deletePostOption.png', xCenter, yCenter];
+assets[brandishIGStory] = ['assets/brandishIGStory.png', xCenter, yCenter];
+assets[heartfeltIGStory] = ['assets/heartfeltIGStory.png', xCenter, yCenter];
+assets[sadComment] = ['assets/sadComment.png', xCenter, yCenter];
+assets[happyComment] = ['assets/happyComment.png', xCenter, yCenter];
+assets[happyText] = ['assets/happyText.png', xCenter, yCenter];
+assets[happyCommentTwo] = ['assets/happyCommentTwo.png', xCenter, yCenter];
+assets[emotionMeter] = ['assets/emotionMeter.png', xCenter, yCenter];
+assets[emotionMeterMeh] = ['assets/emotionMeterMeh.png', xCenter, yCenter];
+assets[emotionMeterHappy] = ['assets/emotionMeterHappy.png', xCenter, yCenter];
+assets[emotionMeterExcited] = ['assets/emotionMeterExcited.png', xCenter, yCenter];
+assets[emotionMeterSad] = ['assets/emotionMeterSad.png', xCenter, yCenter];
+assets[emotionMeterAnxious] = ['assets/emotionMeterAnxious.png', xCenter, yCenter];
+assets[messageBackground] = ['assets/messageBackground.png', xCenter, yCenter];
+
+// Textcopies
+
+let standardTextSize = 50;
+let standardTextColor = color(#ffffff);
+
+let hook = 0;
+let narrativeIntro = 1;
+let chooseCaptionPost = 2;
+let greatChoice = 3;
+let notifications = 4;
+let tooCheesy = 5;
+let chooseCaptionStory = 6;
+let deletePostQuestion = 7;
+let deletePostAnswers = 8;
+let finallyDreamCar = 9;
+let finallyHardWork = 10;
+let storyResponseSad = 11;
+let storyResponseHappy = 12;
+let cringe = 13;
+let keepPost = 14;
+let textResponseHappy = 15;
+let commentResponseHappy = 16;
+let emotionMeterQuestion = 17;
+let messageHappy1 = 18;
+let messageMeh2 = 19;
+let messageSad3 = 20;
+let resetGame = 21;
+
+//Properties of textcopies
+
+let content = 0;
+let color = 1;
+let size = 2
+let x = 3;
+let y = 4;
+
+textboxes[hook] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[narrativeIntro] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[chooseCaptionPost] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+  textboxes[greatChoice] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[notifications] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[tooCheesy] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[chooseCaptionStory] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[deletePostQuestion] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[deletePostAnswers] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[finallyDreamCar] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[finallyHardWork] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[storyResponseSad] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[storyResponseHappy] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[cringe] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[keepPost] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[textResponseHappy] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[commentResponseHappy] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[emotionMeterQuestion] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[messageHappy1] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[messageMeh2] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[messageSad3] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
+textboxes[resetGame] = [
+  "",
+  standardTextColor, standardTextSize, xCenter, yCenter];
 
 // Array of strings
 var strings =[];
