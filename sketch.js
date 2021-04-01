@@ -1,12 +1,7 @@
 /***********************************************************************************
-	SimpleStateMachine - TEMPLATE
-	by Scott Kildall
-
-  SimpleStateMachine + Splash + Instructions screen
+  BimmerWorld
   by Katrina Monje
 
-  Addition:
-  Create a new state called drawSplash; also add splash.png
 
   (1) Upon startup, go to the state
   (2) When the mouse is clicked, go to drawOne
@@ -20,7 +15,7 @@
 	Also start your localhost before running this, otherwise no PNGs will display
 
 ------------------------------------------------------------------------------------
-	The way it works — you don't need to know this for the template use
+	The way it works 
 	* array of images gets loaded at startup
 	* drawFunction is a VARIABLE that points to a function varible name
 	* drawOne(), drawTwo(), etc. are set to be functions.
@@ -40,8 +35,79 @@
 
 ***********************************************************************************/
 
-// Array of images
-var images = [];
+// Global Variables
+
+let xCenter = width/2;
+let yCenter = height/2:
+
+// 2D Arrays for all images and textcopies
+var assets = [][];
+var textboxes = [][];
+
+// Screens (states)
+
+let excitingNews = 0;
+let narrativeIntroduction = 1;
+let chooseCaptionBrandish = 2;
+let chooseCaptionHeartfelt = 3;
+let captionBrandish = 4;
+let captionHeartfelt = 5;
+let lotsOfAttention = 6;
+let noAttention = 7;
+let chooseIGStoryBrandish = 8;
+let chooseIGstoryHeartfelt = 9;
+let deletePostOption = 10;
+let brandishIGStory = 11;
+let heartfeltIGStory = 12;
+let sadComment = 13;
+let happyComment = 14;
+let deletePostOptionYes = 15;
+let deletePostOptionNo = 16;
+let happyText = 17;
+let happyCommentTwo = 18;
+let emotionMeter = 19;
+let emotionMeterMeh = 20;
+let emotionMeterHappy = 21;
+let emotionMeterExcited = 22;
+let emotionMeterSad = 23;
+let emotionMeterAnxious = 24;
+let messageHappy = 25;
+let messageMeh = 26;
+let messageSad = 27;
+let playAgain = 28;
+
+// Assets (images)
+
+let  = 0;
+let  = 1;
+let = 2;
+let = 3;
+let = 4;
+let = 5;
+let = 6;
+let = 7;
+let = 8;
+let = 9;
+let = 10;
+let = 11;
+let = 12;
+let = 13;
+let = 14;
+let = 15;
+let = 16;
+let = 17;
+let = 18;
+let = 19;
+let = 20;
+let = 21;
+let = 22;
+let = 23;
+let = 24;
+let = 25;
+let = 26;
+let = 27;
+let = 28;
+
 
 // Array of strings
 var strings =[];
