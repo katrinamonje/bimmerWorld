@@ -44,6 +44,9 @@ let yCenter = height/2:
 var assets = [][];
 var textboxes = [][];
 
+let xEnterKeyStandardPosition = 1732;
+let yEnterKeyStandardPosition = 917;
+
 // Screens (states)
 
 let excitingNews = 0;
@@ -116,38 +119,38 @@ let file = 0;
 let x = 1;
 let y = 2; 
 
-assets[enterKey] = ['assets/enterKey.png', xCenter, yCenter];
-assets[selfie] = ['assets/selfie.png', xCenter, yCenter];
-assets[keys] = ['assets/keys.png', xCenter, yCenter];
-assets[arrowKey] = ['assets/arrowKey.png', xCenter, yCenter];
-assets[chooseCaptionBrandish] = ['assets/chooseCaptionBrandish.png', xCenter, yCenter];
-assets[chooseCaptionHeartfelt] = ['assets/chooseCaptionHeartfelt.png', xCenter, yCenter];
-assets[captionBrandish] = ['assets/captionBrandish.png', xCenter, yCenter];
-assets[captionHeartfelt] = ['assets/captionHeartfelt.png', xCenter, yCenter];
-assets[notifications] = ['assets/notifications.png', xCenter, yCenter];
-assets[noNotifications] = ['assets/noNotifications.png', xCenter, yCenter];
-assets[chooseIGStoryBrandish] = ['assets/chooseIGStoryBrandish.png', xCenter, yCenter];
-assets[chooseIGStoryHeartfelt] = ['assets/chooseIGStoryHeartfelt.png', xCenter, yCenter];
-assets[yKey] = ['assets/yKey.png', xCenter, yCenter];
-assets[nKey] = ['assets/nKey.png', xCenter, yCenter];
-assets[deletePostOption] = ['assets/deletePostOption.png', xCenter, yCenter];
-assets[brandishIGStory] = ['assets/brandishIGStory.png', xCenter, yCenter];
-assets[heartfeltIGStory] = ['assets/heartfeltIGStory.png', xCenter, yCenter];
-assets[sadComment] = ['assets/sadComment.png', xCenter, yCenter];
-assets[happyComment] = ['assets/happyComment.png', xCenter, yCenter];
-assets[happyText] = ['assets/happyText.png', xCenter, yCenter];
-assets[happyCommentTwo] = ['assets/happyCommentTwo.png', xCenter, yCenter];
-assets[emotionMeter] = ['assets/emotionMeter.png', xCenter, yCenter];
-assets[emotionMeterMeh] = ['assets/emotionMeterMeh.png', xCenter, yCenter];
-assets[emotionMeterHappy] = ['assets/emotionMeterHappy.png', xCenter, yCenter];
-assets[emotionMeterExcited] = ['assets/emotionMeterExcited.png', xCenter, yCenter];
-assets[emotionMeterSad] = ['assets/emotionMeterSad.png', xCenter, yCenter];
-assets[emotionMeterAnxious] = ['assets/emotionMeterAnxious.png', xCenter, yCenter];
-assets[messageBackground] = ['assets/messageBackground.png', xCenter, yCenter];
+assets[enterKey] = ['assets/enterKey.png', xEnterKeyStandardPosition, yEnterKeyStandardPosition];
+assets[selfie] = ['assets/selfie.png', 0, 0];
+assets[keys] = ['assets/keys.png', 0, 0];
+assets[arrowKey] = ['assets/arrowKey.png', 1391, 130];
+assets[chooseCaptionBrandish] = ['assets/chooseCaptionBrandish.png', 0, 0];
+assets[chooseCaptionHeartfelt] = ['assets/chooseCaptionHeartfelt.png', 0, 0];
+assets[captionBrandish] = ['assets/captionBrandish.png', 0, 0];
+assets[captionHeartfelt] = ['assets/captionHeartfelt.png', 0, 0];
+assets[notifications] = ['assets/notifications.png', 0, 0];
+assets[noNotifications] = ['assets/noNotifications.png', 0, 0];
+assets[chooseIGStoryBrandish] = ['assets/chooseIGStoryBrandish.png', 0, 0];
+assets[chooseIGStoryHeartfelt] = ['assets/chooseIGStoryHeartfelt.png', 0, 0];
+assets[yKey] = ['assets/yKey.png', 892, 676];
+assets[nKey] = ['assets/nKey.png', 1460, 676];
+assets[deletePostOption] = ['assets/deletePostOption.png', 0, 0];
+assets[brandishIGStory] = ['assets/brandishIGStory.png', 0, 0];
+assets[heartfeltIGStory] = ['assets/heartfeltIGStory.png', 0, 0];
+assets[sadComment] = ['assets/sadComment.png', 0, 0];
+assets[happyComment] = ['assets/happyComment.png', 0, 0];
+assets[happyText] = ['assets/happyText.png', 0, 0];
+assets[happyCommentTwo] = ['assets/happyCommentTwo.png', 0, 0];
+assets[emotionMeter] = ['assets/emotionMeter.png', 0, 0];
+assets[emotionMeterMeh] = ['assets/emotionMeterMeh.png', 0, 0];
+assets[emotionMeterHappy] = ['assets/emotionMeterHappy.png', 0, 0];
+assets[emotionMeterExcited] = ['assets/emotionMeterExcited.png', 0, 0];
+assets[emotionMeterSad] = ['assets/emotionMeterSad.png', 0, 0];
+assets[emotionMeterAnxious] = ['assets/emotionMeterAnxious.png', 0, 0];
+assets[messageBackground] = ['assets/messageBackground.png', 0, 0];
 
 // Textcopies
 
-let standardTextSize = 50;
+let standardTextSize = 24;
 let standardTextColor = color(#ffffff);
 
 let hook = 0;
@@ -182,194 +185,113 @@ let x = 3;
 let y = 4;
 
 textboxes[hook] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "You have some exciting news to share to everyone and now is the perfect time to do it…",
+  standardTextColor, standardTextSize, 412, 117];
 textboxes[narrativeIntro] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "Congratulations! You finally got that one car you’ve been wanting pretty much your whole life.  It’s not brand new but you’ve worked so hard to get it…You should be proud! What if you put it on your Instagram? ",
+  standardTextColor, standardTextSize, 972, 363];
 textboxes[chooseCaptionPost] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "Choose a photo and a caption for your post!",
+  standardTextColor, standardTextSize, 412, 163];
   textboxes[greatChoice] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "Great choice! That caption is perfect.",
+  standardTextColor, standardTextSize, 857, 511];
 textboxes[notifications] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "You seem to be getting so much attention. It’s only been seconds! How about you post another story?",
+  standardTextColor, standardTextSize, 857, 440];
 textboxes[tooCheesy] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "It’s been a few days since you posted and it seems like no one is liking it. Maybe it’s a bit too cheesy?",
+  standardTextColor, standardTextSize, 857, 440];
 textboxes[chooseCaptionStory] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "How do you want to caption it?",
+  standardTextColor, standardTextSize, 621, 118];
 textboxes[deletePostQuestion] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "Do you want to delete your post?",
+  standardTextColor, standardTextSize, 892, 511];
 textboxes[deletePostAnswers] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "Yes pls                                           Nah",
+  standardTextColor, standardTextSize, 892, 588];
 textboxes[finallyDreamCar] = [
-  "",
+  "Finally…it’s about time your friends and family know about your dream car!",
   standardTextColor, standardTextSize, xCenter, yCenter];
 textboxes[finallyHardWork] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "Finally…this car means a lot to you. Be proud of your hard work!",
+  standardTextColor, standardTextSize, 857, 481];
 textboxes[storyResponseSad] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "A good friend of yours replied to your story!",
+  standardTextColor, standardTextSize, 778, 511];
 textboxes[storyResponseHappy] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "A good friend of yours replied to your story!",
+  standardTextColor, standardTextSize, 778, 511];
 textboxes[cringe] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "Thank God…that was cringe anyway, right?",
+  standardTextColor, standardTextSize, 854, 481];
 textboxes[keepPost] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "Hmm…Yeah. Maybe just keep it posted. It doesn’t matter what people think. Does it?",
+  standardTextColor, standardTextSize, 854, 452];
 textboxes[textResponseHappy] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "A good friend of yours sent you a text!",
+  standardTextColor, standardTextSize, 778, 511];
 textboxes[commentResponseHappy] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "A good friend of yours commented on your photo!",
+  standardTextColor, standardTextSize, 778, 481];
 textboxes[emotionMeterQuestion] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "How do you feel now that you’ve shown your car to the world?",
+  standardTextColor, standardTextSize, 298, 237];
 textboxes[messageHappy1] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "That’s great! Always remember that you have the power to show the true you, even on social media. Stay genuine and continue to inspire others!",
+  standardTextColor, 60, 463, 358];
 textboxes[messageMeh2] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "I’m sorry to hear that. Maybe this is a good reminder to reflect on how you want to be perceived through what you post online. If you stay true to yourself, maybe you’ll feel better next time!",
+  standardTextColor, 60, 463, 358];
 textboxes[messageSad3] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "Sometimes, we need to just get off social media every once in a while. Life is more than just Instagram likes and online attention. At the end of the day you are doing things for YOU!",
+  standardTextColor, 60, 463, 358];
 textboxes[resetGame] = [
-  "",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  "Click anywhere to play again!",
+  standardTextColor, 70, 960, 448];
 
-// Array of strings
-var strings =[];
-var midX
-var startY;
-var lineHeight = 24;
+/// p5.js /////////////////////////////////////////////////////
 
-// variable that is a function 
-var drawFunction;
-
-// offset from bottom of screen
-var gTextOffset = 20;
-
-// load all images into an array
+// Load all images into an array of arrays
 function preload() {
-  images[0] = loadImage('assets/calm.png');
-  images[1] = loadImage('assets/energized.png');
-  images[2] = loadImage('assets/inspired.png');
-  images[3] = loadImage('assets/excited.png');
-  images[4] = loadImage('assets/hopeful.png');
-  images[5] = loadImage('assets/splash.png');
-}
-
-// Center drawing, drawFunction will be one for default
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-
-  // Set variables for array
-  midX = width/2;
-  startY = 60;
-
-  // Center our drawing objects
-  imageMode(CENTER);
-  textAlign(CENTER);
-  textSize(24);
-
- // Array for instructions screen
-  loadArray();
-
-  // set to splash for startup
-  drawFunction = drawSplash;
-}
-
-// Very simple, sets the background color and calls your state machine function
-function draw() {
-  background(255);
-
-  // will call your state machine function
-  drawFunction();
-}
-
-//========= TEMPLATE: modify these functions, INSIDE the function blocks only =========
-
-//-- drawOne() will draw the image at index 0 from the array
-drawOne = function() {
-   image(images[0],width/2, height/2);
-
-   fill(0,0,0);
-   text("calm", width/2, height - gTextOffset);
-}
-
-//-- drawTwo() will draw the image at index 1 from the array
-drawTwo = function() {
-   image(images[1],width/2, height/2);
-
-   fill(240,120,0);
-   text("energized", width/2, height - gTextOffset);
-}
-
-//-- drawThree() will draw the image at index 2 from the array
-drawThree = function() {
-   image(images[2],width/2, height/2);
-
-   fill(40,230,120);
-   text("inspired", width/2, height - gTextOffset);
-}
-
-//-- drawFour() will draw the image at index 3 from the array
-drawFour = function() {
-   image(images[3],width/2, height/2);
-
-   fill(255,255,178);
-   text("excited", width/2, height - gTextOffset);
-}
-
-//-- drawFive() will draw the image at index 4 from the array
-drawFive = function() {
-   image(images[4],width/2, height/2);
-
-   fill(230,50,50);
-   text("hopeful", width/2, height - gTextOffset);
-}
-
-//-- drawSplash() will draw the image at index 4 from the array
-drawSplash = function() {
-   image(images[5],width/2, height/2);
-
-  fill(230,50,50);
-   text("refresh mood!", width/2, height - gTextOffset);   
-}
-
-// Draw the strings from the array
-drawInstructions = function() {
-  background(0);
-
-  fill(255);
-  for( let i = 0 ; i < strings.length; i++) {
-        text( strings[i], midX, startY + (i * lineHeight) )
+  for (varr i = 0; i < assets.length; i++) {
+    loadImage(assets[i][file]);
   }
 }
 
-function loadArray() {
-  strings[0] = "Press 1 for a calm mood";
-  strings[1] = "Press 2 for an energized mood";
-  strings[2] = "Press 3 for an inspired mood";
-  strings[3] = "Press 4 for an excited mood";
-  strings[4] = "Press 5 for a hopeful mood";
-  strings[5] = "Press s to refresh mood";
+function setup() {
+  createCanvas(1920, 1080);
 }
 
-//========= TEMPLATE: add or change interface functions, as you like =========
+function draw() {
+  background(30, 41, 18);
+  display(currentScreen);
+}
 
-// Change the drawFunction variable based on your interaction
+// Displays each state (screen)
+display = function() {
+  if (currentScreen === ) {
+    displayAsset();
+    displayTextbox();
+  }
+  else if( currentScreen === ) {
+
+  }
+}
+
+function keyPressed() {
+
+}
+
+function keyReleased() {
+
+}
+
+function mousePressed() {
+
+}
+
 function keyTyped() {
   if( key === '1' ) {
   	drawFunction = drawOne;
