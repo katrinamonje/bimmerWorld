@@ -11,7 +11,7 @@ Created in p5.js, this project is a simulation that aims to bring awareness on h
 ##
 
 ### Technical Details
-The user interaction relies on navigation keys such as the left, right, up, and down arrow keys for choosing different options in certain screens, the enter key in order to advance to the next screen, and the r key to reset the game. The code is based on 28 different states: some states (screens) will prompt the player to make decisions that will determine the outcome of the story. The main abstraction strategy I used are array of arrays and defining functions that display each screen in an organized way. Credit goes to Kathleen Monje (my sister) who helped me learn how to do 2D arrays. 
+The user interaction relies on navigation keys such as the left, right, up, and down arrow keys for choosing different options in certain screens, the enter key in order to advance to the next screen, and the mouse (click) to reset the game. The code is based on 28 different states: some states (screens) will prompt the player to make decisions that will determine the outcome of the story. The main abstraction strategy I used are array of arrays and defining functions that display each screen in an organized way. Credit goes to Kathleen Monje (my sister) who helped me learn how to do 2D arrays. 
 
 The assets folder contains any image files for icons, backgrounds, fonts, and other elements used in the project.
 
