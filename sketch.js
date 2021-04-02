@@ -35,19 +35,32 @@
 
 ***********************************************************************************/
 
-// Global Variables
+// Standard Paramaters
 
 let xCenter = width/2;
 let yCenter = height/2:
 
-// 2D Arrays for all images and textcopies
-var assets = [][];
-var textboxes = [][];
-
 let xEnterKeyStandardPosition = 1732;
 let yEnterKeyStandardPosition = 917;
 
-// Screens (states)
+let standardTextSize = 24;
+let standardTextColor = color(#ffffff);
+
+// Indexes for properties of assets (images)
+
+let file = 0;
+let xAssets = 1;
+let yAssets = 2; 
+
+// Indexes for properties of textboxes (textcopies)
+
+let content = 0;
+let color = 1;
+let size = 2
+let xTextboxes = 3;
+let yTextboxes = 4;
+
+// Indexes for all screens (states)
 
 let excitingNews = 0;
 let narrativeIntroduction = 1;
@@ -79,10 +92,9 @@ let messageMeh = 26;
 let messageSad = 27;
 let playAgain = 28;
 
-// Displays splash screen
-var currentScreen = hook;
+var currentScreen = excitingNews; // Holds index for currently displayed screen
 
-// Assets (images), indexed in order of appearance
+// Indexes for all assets, in order of appearance
 
 let enterKey = 0;
 let selfie = 1;
@@ -113,11 +125,34 @@ let emotionMeterSad = 25;
 let emotionMeterAnxious = 26;
 let messageBackground = 27;
 
-// Properties of images
+// Indexes for all textboxes, in order of appearance
 
-let file = 0;
-let x = 1;
-let y = 2; 
+let hook = 0;
+let narrativeIntro = 1;
+let chooseCaptionPost = 2;
+let greatChoice = 3;
+let notifications = 4;
+let tooCheesy = 5;
+let chooseCaptionStory = 6;
+let deletePostQuestion = 7;
+let deletePostAnswers = 8;
+let finallyDreamCar = 9;
+let finallyHardWork = 10;
+let storyResponseSad = 11;
+let storyResponseHappy = 12;
+let cringe = 13;
+let keepPost = 14;
+let textResponseHappy = 15;
+let commentResponseHappy = 16;
+let emotionMeterQuestion = 17;
+let messageHappy1 = 18;
+let messageMeh2 = 19;
+let messageSad3 = 20;
+let resetGame = 21;
+
+// 2D Arrays for all images and textboxes
+
+var assets = [][];
 
 assets[enterKey] = ['assets/enterKey.png', xEnterKeyStandardPosition, yEnterKeyStandardPosition];
 assets[selfie] = ['assets/selfie.png', 0, 0];
@@ -148,41 +183,7 @@ assets[emotionMeterSad] = ['assets/emotionMeterSad.png', 0, 0];
 assets[emotionMeterAnxious] = ['assets/emotionMeterAnxious.png', 0, 0];
 assets[messageBackground] = ['assets/messageBackground.png', 0, 0];
 
-// Textcopies
-
-let standardTextSize = 24;
-let standardTextColor = color(#ffffff);
-
-let hook = 0;
-let narrativeIntro = 1;
-let chooseCaptionPost = 2;
-let greatChoice = 3;
-let notifications = 4;
-let tooCheesy = 5;
-let chooseCaptionStory = 6;
-let deletePostQuestion = 7;
-let deletePostAnswers = 8;
-let finallyDreamCar = 9;
-let finallyHardWork = 10;
-let storyResponseSad = 11;
-let storyResponseHappy = 12;
-let cringe = 13;
-let keepPost = 14;
-let textResponseHappy = 15;
-let commentResponseHappy = 16;
-let emotionMeterQuestion = 17;
-let messageHappy1 = 18;
-let messageMeh2 = 19;
-let messageSad3 = 20;
-let resetGame = 21;
-
-//Properties of textcopies
-
-let content = 0;
-let color = 1;
-let size = 2
-let x = 3;
-let y = 4;
+var textboxes = [][];
 
 textboxes[hook] = [
   "You have some exciting news to share to everyone and now is the perfect time to do it…",
@@ -280,6 +281,12 @@ display = function() {
   }
 }
 
+
+
+
+
+
+// Navigation interactions between screens (states)
 function keyPressed() {
 
 }
