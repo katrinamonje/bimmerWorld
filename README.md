@@ -13,12 +13,10 @@ Created in p5.js, this project is a simulation that aims to bring awareness on h
 ### Technical Details
 The user interaction relies on navigation keys such as the left, right, up, and down arrow keys for choosing different options in certain screens, the enter key in order to advance to the next screen, and the mouse (click) to reset the game. The code is based on 28 different states: some states (screens) will prompt the player to make decisions that will determine the outcome of the story. The main abstraction strategy I used are array of arrays and defining functions that display each screen in an organized way. Credit goes to Kathleen Monje (my sister) who helped me learn how to do 2D arrays. 
 
-The assets folder contains any image files for icons, backgrounds, fonts, and other elements used in the project.
+The assets folder contains any image files for icons, backgrounds, fonts, and other elements used in the project. The font I used is Katrinus, which is my own font in TTF.
 
 The development folder includes project files with the code structure, initial brainstorming sketches, and the state machine I created for easier abstraction of the project.  
 
 Prototype (Adobe XD)
 The AdobeXD file consists of the 28 screens as aa mockup of the code and storyline, which is in the link below:
 https://xd.adobe.com/view/d09c0353-fedb-4d41-9ea2-bf46dae4348e-85cf/
-
-

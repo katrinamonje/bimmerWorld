@@ -2,35 +2,24 @@
   BimmerWorld
   by Katrina Monje
 
+  This is an Interaction Design Course project about how posting on social media makes us feel on a daily. This project aims to explore state machines and navigating between screens.
 
-  (1) Upon startup, go to the state
-  (2) When the mouse is clicked, go to drawOne
+  The story follows a young girl who wants to share her story—finally getting her dream car through hard work and patience.
 
-	Template:
+  Instructions
+  (1) Navigate between states through the keyboard. Press the ENTER key to advance to the next screen (state).
+  (2) Press the ESC key to go back to the beginning and reset the game.
+  (3) Press the L or R arrow keys in screens where you have to choose an action. Y and N keys are also used in one screen.
 
-	(1) Add your own PNG files in the assets folder. Make sure they match the names ***exactly*** of the existing PNGs.
-	(2) Add custom drawing code to drawOne(), drawTwo(), drawThree(), drawFour(), drawFive()
-	(3) You can add your own interfaces - keys, mouse events, etc in the Interfaces section
-
-	Also start your localhost before running this, otherwise no PNGs will display
+	Also start your localhost before running this, otherwise no PNGs will display.
 
 ------------------------------------------------------------------------------------
 	The way it works 
-	* array of images gets loaded at startup
-	* drawFunction is a VARIABLE that points to a function varible name
-	* drawOne(), drawTwo(), etc. are set to be functions.
-	* the the keys 1-5 will change the drawFunction variable
-
-------------------------------------------------------------------------------------
-	Notes:
-	- a more advanced state machine with use array-indexing for each of
-		images the draw functions, but this is just for illustrative purposes
-
-	- even more advanced will be to put the draw functions into an array, would
-		be helpful for randomizing, go to the next function, etc
-
-	- next step after that would be to put interfaces into an array that maps to
-		the functions
+	* I've created indexes for properties of all elements, which includes the screens, images and strings.
+  * I also created 2 sets of 2D arrays for all assets for a more organanized code structure.
+  * The preload function loads all images (and the font I used).
+  * The display function displays each state (screen), which also includes the displayAssets and displayTextboxes functions, with 'asset' and 'textbox' as their parameters, respectively.
+  * Lastly, navigation in this project includes keyPressed, keyTyped(), and mouseClicked(); 
 
 
 ***********************************************************************************/
@@ -43,8 +32,9 @@
 let xEnterKeyStandardPosition = 1732;
 let yEnterKeyStandardPosition = 917;
 
-let standardTextSize = 24;
+let standardTextSize = 37;
 let standardTextColor = ('#ffffff');
+var fontKatrinus;
 
 // Indexes for properties of assets (images)
 
@@ -156,76 +146,80 @@ var assets = [[]];
 var textboxes = [[]];
 
 textboxes[hook] = [
-  "You have some exciting news to share to everyone and now is the perfect time to do it…",
-  standardTextColor, 30, 403, 117];
+  "You have some exciting news to share to everyone,\nand now is the perfect time to do it!",
+  standardTextColor, 45, 403, 130];
 textboxes[narrativeIntro] = [
-  "Congratulations! You finally got that one car you’ve been wanting\npretty much your whole life.  It’s not brand new but you’ve worked\nso hard to get it…You should be proud!\n\nWhat if you put it on your Instagram? ",
+  "Congratulations! You finally got that one car you’ve\nbeen wanting pretty much your whole life.\nIt’s not brand new but you’ve worked so hard to get it.\nYou should be proud!\n\nWhat if you put it on your Instagram? ",
   standardTextColor, standardTextSize, 972, 363];
 textboxes[chooseCaptionPost] = [
   "Choose a photo and a caption for your post!",
-  standardTextColor, standardTextSize, 412, 163];
+  standardTextColor, 45, 412, 163];
   textboxes[greatChoice] = [
   "Great choice! That caption is perfect.",
-  standardTextColor, standardTextSize, 857, 511];
+  standardTextColor, 45, 857, 511];
 textboxes[manyNotifications] = [
-  "You seem to be getting so much attention. It’s only been seconds! How about you post another story?",
+  "You seem to be getting so much attention.\nIt’s only been seconds! How about you post another story?",
   standardTextColor, standardTextSize, 857, 440];
 textboxes[tooCheesy] = [
-  "It’s been a few days since you posted and it seems like no one is liking it. Maybe it’s a bit too cheesy?",
+  "It’s been a few days since you posted\nand it seems like no one is liking it.\nMaybe it’s a bit too cheesy?",
   standardTextColor, standardTextSize, 857, 440];
 textboxes[chooseCaptionStory] = [
   "How do you want to caption it?",
-  standardTextColor, standardTextSize, 621, 118];
+  standardTextColor, 45, 621, 118];
 textboxes[deletePostQuestion] = [
   "Do you want to delete your post?",
-  standardTextColor, standardTextSize, 892, 511];
+  standardTextColor, 45, 902, 511];
 textboxes[deletePostAnswers] = [
-  "Yes pls                                           Nah",
-  standardTextColor, standardTextSize, 892, 588];
+  "Yes pls.                               Nah",
+  standardTextColor, 45, 902, 588];
 textboxes[finallyDreamCar] = [
-  "Finally…it’s about time your friends and family know about your dream car!",
+  "Finally... it’s about time your friends\nand family know about your dream car!",
   standardTextColor, standardTextSize, 857, 481];
 textboxes[finallyHardWork] = [
-  "Finally…this car means a lot to you. Be proud of your hard work!",
+  "Finally... this car means a lot to you.\nBe proud of your hard work!",
   standardTextColor, standardTextSize, 857, 481];
 textboxes[storyResponseSad] = [
   "A good friend of yours replied to your story!",
-  standardTextColor, standardTextSize, 778, 511];
+  standardTextColor, 45, 778, 511];
 textboxes[storyResponseHappy] = [
   "A good friend of yours replied to your story!",
-  standardTextColor, standardTextSize, 778, 511];
+  standardTextColor, 45, 778, 511];
 textboxes[cringe] = [
-  "Thank God…that was cringe anyway, right?",
-  standardTextColor, standardTextSize, 854, 481];
+  "Thank God... that was cringe anyway, right?",
+  standardTextColor, 45, 854, 481];
 textboxes[keepPost] = [
-  "Hmm…Yeah. Maybe just keep it posted. It doesn’t matter what people think. Does it?",
+  "Hmm... Yeah. Maybe just keep it posted.\nIt doesn’t matter what people think. Does it?",
   standardTextColor, standardTextSize, 854, 452];
 textboxes[textResponseHappy] = [
   "A good friend of yours sent you a text!",
-  standardTextColor, standardTextSize, 778, 511];
+  standardTextColor, 45, 778, 511];
 textboxes[commentResponseHappy] = [
   "A good friend of yours commented on your photo!",
-  standardTextColor, standardTextSize, 778, 481];
+  standardTextColor, 45, 778, 481];
 textboxes[emotionMeterQuestion] = [
   "How do you feel now that you’ve shown your car to the world?",
-  standardTextColor, standardTextSize, 298, 237];
+  standardTextColor, 39, 270, 237];
 textboxes[messageHappy1] = [
-  "That’s great! Always remember that you have the power to show the true you, even on social media. Stay genuine and continue to inspire others!",
-  standardTextColor, 40, 463, 358];
+  "That’s great! Always remember that YOU\nhave the power to show the true you, even on social media.\nStay genuine and continue to inspire others!",
+  standardTextColor, 45, 430, 430];
 textboxes[messageMeh2] = [
-  "I’m sorry to hear that. Maybe this is a good reminder to reflect on how you want to be perceived through what you post online. If you stay true to yourself, maybe you’ll feel better next time!",
-  standardTextColor, 40, 463, 358];
+  "I’m sorry to hear that. Maybe this is\na good reminder to reflect on how you want\nto be perceived through what you post online.\nIf you stay true to yourself, maybe you’ll feel better next time!",
+  standardTextColor, 45, 463, 430];
 textboxes[messageSad3] = [
-  "Sometimes, we need to just get off social media every once in a while. Life is more than just Instagram likes and online attention. At the end of the day you are doing things for YOU!",
-  standardTextColor, 40, 463, 358];
+  "Sometimes, we need to just get off\nsocial media every once in a while.\nLife is more than just Instagram likes\nand online attention. At the end of\nthe day you are doing things for YOU!",
+  standardTextColor, 45, 463, 430];
 textboxes[resetGame] = [
   "Click anywhere to play again!",
-  standardTextColor, 55, 960, 448];
+  standardTextColor, 55, 1000, 448];
 
 /// p5.js /////////////////////////////////////////////////////
 
-// Load all images into an array of arrays
+// Loads all images into an array of arrays, as well as font used in the program
 function preload() {
+  // Font
+  fontKatrinus = loadFont('assets/Katrinus.ttf');
+
+  // Images
   assets[enterKey] = [loadImage("assets/enterKey.png"), xEnterKeyStandardPosition, yEnterKeyStandardPosition];
   assets[selfie] = [loadImage("assets/selfie.png"), 0, 0];
   assets[keys] = [loadImage("assets/keys.png"), 0, 0];
@@ -258,6 +252,8 @@ function preload() {
 
 function setup() {
   createCanvas(1920, 1080);
+
+  textFont(fontKatrinus);
 }
 
 function draw() {
