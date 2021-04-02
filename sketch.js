@@ -37,14 +37,14 @@
 
 // Standard Paramaters
 
-let xCenter = width/2;
-let yCenter = height/2:
+// let xCenter = width/2;
+// let yCenter = height/2;
 
 let xEnterKeyStandardPosition = 1732;
 let yEnterKeyStandardPosition = 917;
 
 let standardTextSize = 24;
-let standardTextColor = color(#ffffff);
+let standardTextColor = ('#ffffff');
 
 // Indexes for properties of assets (images)
 
@@ -62,37 +62,37 @@ let textboxY = 4;
 
 // Indexes for all screens (states)
 
-let excitingNews = 0;
-let narrativeIntroduction = 1;
-let chooseCaptionBrandish = 2;
-let chooseCaptionHeartfelt = 3;
-let captionBrandish = 4;
-let captionHeartfelt = 5;
-let lotsOfAttention = 6;
-let noAttention = 7;
-let chooseIGStoryBrandish = 8;
-let chooseIGstoryHeartfelt = 9;
-let deletePostOption = 10;
-let brandishIGStory = 11;
-let heartfeltIGStory = 12;
-let sadComment = 13;
-let happyComment = 14;
-let deletePostOptionYes = 15;
-let deletePostOptionNo = 16;
-let happyText = 17;
-let happyCommentTwo = 18;
-let emotionMeter = 19;
-let emotionMeterMeh = 20;
-let emotionMeterHappy = 21;
-let emotionMeterExcited = 22;
-let emotionMeterSad = 23;
-let emotionMeterAnxious = 24;
-let messageHappy = 25;
-let messageMeh = 26;
-let messageSad = 27;
-let playAgain = 28;
+let excitingNewsScreen = 0;
+let narrativeIntroductionScreen = 1;
+let chooseCaptionBrandishScreen = 2;
+let chooseCaptionHeartfeltScreen = 3;
+let captionBrandishScreen = 4;
+let captionHeartfeltScreen = 5;
+let lotsOfAttentionScreen = 6;
+let noAttentionScreen = 7;
+let chooseIGStoryBrandishScreen = 8;
+let chooseIGstoryHeartfeltScreen = 9;
+let deletePostOptionScreen = 10;
+let brandishIGStoryScreen = 11;
+let heartfeltIGStoryScreen = 12;
+let sadCommentScreen = 13;
+let happyCommentScreen = 14;
+let deletePostOptionYesScreen = 15;
+let deletePostOptionNoScreen = 16;
+let happyTextScreen = 17;
+let happyCommentTwoScreen = 18;
+let emotionMeterScreen = 19;
+let emotionMeterMehScreen = 20;
+let emotionMeterHappyScreen = 21;
+let emotionMeterExcitedScreen = 22;
+let emotionMeterSadScreen = 23;
+let emotionMeterAnxiousScreen = 24;
+let messageHappyScreen = 25;
+let messageMehScreen = 26;
+let messageSadScreen = 27;
+let playAgainScreen = 28;
 
-var currentScreen = excitingNews; // Holds index for currently displayed screen
+var currentScreen = excitingNewsScreen; // Holds index for currently displayed screen
 
 // Indexes for all assets, in order of appearance
 
@@ -131,7 +131,7 @@ let hook = 0;
 let narrativeIntro = 1;
 let chooseCaptionPost = 2;
 let greatChoice = 3;
-let notifications = 4;
+let manyNotifications = 4;
 let tooCheesy = 5;
 let chooseCaptionStory = 6;
 let deletePostQuestion = 7;
@@ -150,40 +150,10 @@ let messageMeh2 = 19;
 let messageSad3 = 20;
 let resetGame = 21;
 
-// 2D Arrays for all images and textboxes
+// 2D Arrays for all assets and textboxes
 
-var assets = [][];
-
-assets[enterKey] = ['assets/enterKey.png', xEnterKeyStandardPosition, yEnterKeyStandardPosition];
-assets[selfie] = ['assets/selfie.png', 0, 0];
-assets[keys] = ['assets/keys.png', 0, 0];
-assets[arrowKey] = ['assets/arrowKey.png', 1391, 130];
-assets[chooseCaptionBrandish] = ['assets/chooseCaptionBrandish.png', 0, 0];
-assets[chooseCaptionHeartfelt] = ['assets/chooseCaptionHeartfelt.png', 0, 0];
-assets[captionBrandish] = ['assets/captionBrandish.png', 0, 0];
-assets[captionHeartfelt] = ['assets/captionHeartfelt.png', 0, 0];
-assets[notifications] = ['assets/notifications.png', 0, 0];
-assets[noNotifications] = ['assets/noNotifications.png', 0, 0];
-assets[chooseIGStoryBrandish] = ['assets/chooseIGStoryBrandish.png', 0, 0];
-assets[chooseIGStoryHeartfelt] = ['assets/chooseIGStoryHeartfelt.png', 0, 0];
-assets[yKey] = ['assets/yKey.png', 892, 676];
-assets[nKey] = ['assets/nKey.png', 1460, 676];
-assets[deletePostOption] = ['assets/deletePostOption.png', 0, 0];
-assets[brandishIGStory] = ['assets/brandishIGStory.png', 0, 0];
-assets[heartfeltIGStory] = ['assets/heartfeltIGStory.png', 0, 0];
-assets[sadComment] = ['assets/sadComment.png', 0, 0];
-assets[happyComment] = ['assets/happyComment.png', 0, 0];
-assets[happyText] = ['assets/happyText.png', 0, 0];
-assets[happyCommentTwo] = ['assets/happyCommentTwo.png', 0, 0];
-assets[emotionMeter] = ['assets/emotionMeter.png', 0, 0];
-assets[emotionMeterMeh] = ['assets/emotionMeterMeh.png', 0, 0];
-assets[emotionMeterHappy] = ['assets/emotionMeterHappy.png', 0, 0];
-assets[emotionMeterExcited] = ['assets/emotionMeterExcited.png', 0, 0];
-assets[emotionMeterSad] = ['assets/emotionMeterSad.png', 0, 0];
-assets[emotionMeterAnxious] = ['assets/emotionMeterAnxious.png', 0, 0];
-assets[messageBackground] = ['assets/messageBackground.png', 0, 0];
-
-var textboxes = [][];
+var assets = [[]];
+var textboxes = [[]];
 
 textboxes[hook] = [
   "You have some exciting news to share to everyone and now is the perfect time to do it…",
@@ -197,7 +167,7 @@ textboxes[chooseCaptionPost] = [
   textboxes[greatChoice] = [
   "Great choice! That caption is perfect.",
   standardTextColor, standardTextSize, 857, 511];
-textboxes[notifications] = [
+textboxes[manyNotifications] = [
   "You seem to be getting so much attention. It’s only been seconds! How about you post another story?",
   standardTextColor, standardTextSize, 857, 440];
 textboxes[tooCheesy] = [
@@ -214,7 +184,7 @@ textboxes[deletePostAnswers] = [
   standardTextColor, standardTextSize, 892, 588];
 textboxes[finallyDreamCar] = [
   "Finally…it’s about time your friends and family know about your dream car!",
-  standardTextColor, standardTextSize, xCenter, yCenter];
+  standardTextColor, standardTextSize, 857, 481];
 textboxes[finallyHardWork] = [
   "Finally…this car means a lot to you. Be proud of your hard work!",
   standardTextColor, standardTextSize, 857, 481];
@@ -256,9 +226,34 @@ textboxes[resetGame] = [
 
 // Load all images into an array of arrays
 function preload() {
-  for (varr i = 0; i < assets.length; i++) {
-    loadImage(assets[i][file]);
-  }
+  assets[enterKey] = [loadImage("assets/enterKey.png"), xEnterKeyStandardPosition, yEnterKeyStandardPosition];
+  assets[selfie] = [loadImage("assets/selfie.png"), 0, 0];
+  assets[keys] = [loadImage("assets/keys.png"), 0, 0];
+  assets[arrowKey] = [loadImage("assets/arrowKey.png"), 1391, 130];
+  assets[chooseCaptionBrandish] = [loadImage("assets/chooseCaptionBrandish.png"), 0, 0];
+  assets[chooseCaptionHeartfelt] = [loadImage("assets/chooseCaptionHeartfelt.png"), 0, 0];
+  assets[captionBrandish] = [loadImage("assets/captionBrandish.png"), 0, 0];
+  assets[captionHeartfelt] = [loadImage("assets/captionHeartfelt.png"), 0, 0];
+  assets[notifications] = [loadImage("assets/notifications.png"), 0, 0];
+  assets[noNotifications] = [loadImage("assets/noNotifications.png"), 0, 0];
+  assets[chooseIGStoryBrandish] = [loadImage("assets/chooseIGStoryBrandish.png"), 0, 0];
+  assets[chooseIGStoryHeartfelt] = [loadImage("assets/chooseIGStoryHeartfelt.png"), 0, 0];
+  assets[yKey] = [loadImage("assets/yKey.png"), 892, 676];
+  assets[nKey] = [loadImage("assets/nKey.png"), 1460, 676];
+  assets[deletePostOption] = [loadImage("assets/deletePostOption.png"), 0, 0];
+  assets[brandishIGStory] = [loadImage("assets/brandishIGStory.png"), 0, 0];
+  assets[heartfeltIGStory] = [loadImage("assets/heartfeltIGStory.png"), 0, 0];
+  assets[sadComment] = [loadImage("assets/sadComment.png"), 0, 0];
+  assets[happyComment] = [loadImage("assets/happyComment.png"), 0, 0];
+  assets[happyText] = [loadImage("assets/happyText.png"), 0, 0];
+  assets[happyCommentTwo] = [loadImage("assets/happyCommentTwo.png"), 0, 0];
+  assets[emotionMeter] = [loadImage("assets/emotionMeter.png"), 0, 0];
+  assets[emotionMeterMeh] = [loadImage("assets/emotionMeterMeh.png"), 0, 0];
+  assets[emotionMeterHappy] = [loadImage("assets/emotionMeterHappy.png"), 0, 0];
+  assets[emotionMeterExcited] = [loadImage("assets/emotionMeterExcited.png"), 0, 0];
+  assets[emotionMeterSad] = [loadImage("assets/emotionMeterSad.png"), 0, 0];
+  assets[emotionMeterAnxious] = [loadImage("assets/emotionMeterAnxious.png"), 0, 0];
+  assets[messageBackground] = [loadImage("assets/messageBackground.png"), 0, 0];
 }
 
 function setup() {
@@ -272,164 +267,169 @@ function draw() {
 
 // Displays each state (screen)
 display = function() {
-  if (currentScreen == excitingNews) {
-    displayAsset(enterKey);
+  if (currentScreen == excitingNewsScreen) {
     displayAsset(selfie);
     displayTextbox(hook);
-  }
-  else if (currentScreen == NarrativeIntroduction) {
     displayAsset(enterKey);
+  }
+  else if (currentScreen == narrativeIntroductionScreen) {
     displayAsset(keys);
     displayTextbox(narrativeIntro);
-  }
-  else if (currentScreen == chooseCaptionBrandish) {
     displayAsset(enterKey);
-    displayAsset(arrowKey);
+  }
+  else if (currentScreen == chooseCaptionBrandishScreen) {
     displayAsset(chooseCaptionBrandish);
     displayTextbox(chooseCaptionPost);
-  }
-  else if (currentScreen == chooseCaptionHeartfelt) {
     displayAsset(enterKey);
     displayAsset(arrowKey);
+  }
+  else if (currentScreen == chooseCaptionHeartfeltScreen) {
     displayAsset(chooseCaptionHeartfelt);
     displayTextbox(chooseCaptionPost);
-  }
-  else if (currentScreen == captionHeartfelt) {
     displayAsset(enterKey);
+    displayAsset(arrowKey);
+  }
+  else if (currentScreen == captionBrandishScreen) {
+    displayAsset(captionBrandish);
+    displayTextbox(greatChoice);
+    displayAsset(enterKey);
+  }
+  else if (currentScreen == captionHeartfeltScreen) {
     displayAsset(captionHeartfelt);
     displayTextbox(greatChoice);
-  }
-  else if (currentScreen == lotsOfAttention) {
     displayAsset(enterKey);
+  }
+  else if (currentScreen == lotsOfAttentionScreen) {
     displayAsset(notifications);
-    displayTextbox(notifications);
-  }
-  else if (currentScreen == noAttention) {
+    displayTextbox(manyNotifications);
     displayAsset(enterKey);
+  }
+  else if (currentScreen == noAttentionScreen) {
     displayAsset(noNotifications);
     displayTextbox(tooCheesy);
-  }
-  else if (currentScreen == chooseIGStoryBrandish) {
     displayAsset(enterKey);
-    displayAsset(arrowKey);
+  }
+  else if (currentScreen == chooseIGStoryBrandishScreen) {
     displayAsset(chooseIGStoryBrandish);
     displayTextbox(chooseCaptionStory);
-  }
-  else if (currentScreen == chooseIGstoryHeartfelt) {
     displayAsset(enterKey);
     displayAsset(arrowKey);
+  }
+  else if (currentScreen == chooseIGStoryHeartfeltScreen) {
     displayAsset(chooseIGstoryHeartfelt);
     displayTextbox(chooseCaptionStory);
+    displayAsset(enterKey);
+    displayAsset(arrowKey);
   }
-  else if (currentScreen == deletePostOption) {
-    displayAsset(yKey);
-    displayAsset(nKey);
+  else if (currentScreen == deletePostOptionScreen) {
     displayAsset(deletePostOption);
     displayTextbox(deletePostQuestion);
     displayTextbox(deletePostAnswers);
+    displayAsset(yKey);
+    displayAsset(nKey);
   }
-  else if (currentScreen == brandishIGStory) {
-    displayAsset(enterKey);
+  else if (currentScreen == brandishIGStoryScreen) {
     displayAsset(brandishIGStory);
     displayTextbox(finallyDreamCar);
-  }
-  else if (currentScreen == heartfeltIGStory) {
     displayAsset(enterKey);
+  }
+  else if (currentScreen == heartfeltIGStoryScreen) {
     displayAsset(heartfeltIGStory);
     displayTextbox(finallyHardWork);
-  }
-  else if (currentScreen == sadComment) {
     displayAsset(enterKey);
+  }
+  else if (currentScreen == sadCommentScreen) {
     displayAsset(sadComment);
     displayTextbox(storyResponseSad);
-  }
-  else if (currentScreen == happyComment) {
     displayAsset(enterKey);
+  }
+  else if (currentScreen == happyCommentScreen) {
     displayAsset(happyComment);
     displayTextbox(storyResponseHappy);
-  }
-  else if (currentScreen == deletePostOptionYes) {
     displayAsset(enterKey);
+  }
+  else if (currentScreen == deletePostOptionYesScreen) {
     displayAsset(deletePostOption);
     displayTextbox(cringe);
-  }
-  else if (currentScreen == deletePostOptionNo) {
     displayAsset(enterKey);
+  }
+  else if (currentScreen == deletePostOptionNoScreen) {
     displayAsset(deletePostOption);
     displayTextbox(keepPost);
-  }
-  else if (currentScreen == happyText) {
     displayAsset(enterKey);
+  }
+  else if (currentScreen == happyTextScreen) {
     displayAsset(happyText);
     displayTextbox(textResponseHappy);
-  }
-  else if (currentScreen == happyCommentTwo) {
     displayAsset(enterKey);
+  }
+  else if (currentScreen == happyCommentTwoScreen) {
     displayAsset(happyCommentTwo);
     displayTextbox(commentResponseHappy);
-  }
-  else if (currentScreen == emotionMeter) {
     displayAsset(enterKey);
-    displayAsset(arrowKey);
+  }
+  else if (currentScreen == emotionMeterScreen) {
     displayAsset(emotionMeter);
     displayTextbox(emotionMeterQuestion);
-  }
-  else if (currentScreen == emotionMeterMeh) {
     displayAsset(enterKey);
     displayAsset(arrowKey);
-    displayAsset();
+  }
+  else if (currentScreen == emotionMeterMehScreen) {
+    displayAsset(emotionMeterMeh);
     displayTextbox(emotionMeterQuestion);
-  }
-  else if (currentScreen == emotionMeterHappy) {
     displayAsset(enterKey);
     displayAsset(arrowKey);
+  }
+  else if (currentScreen == emotionMeterHappyScreen) {
     displayAsset(emotionMeterHappy);
     displayTextbox(emotionMeterQuestion);
-  }
-  else if (currentScreen == emotionMeterExcited) {
     displayAsset(enterKey);
     displayAsset(arrowKey);
+  }
+  else if (currentScreen == emotionMeterExcitedScreen) {
     displayAsset(emotionMeterExcited);
     displayTextbox(emotionMeterQuestion);
-  }
-  else if (currentScreen == emotionMeterSad) {
     displayAsset(enterKey);
     displayAsset(arrowKey);
+  }
+  else if (currentScreen == emotionMeterSadScreen) {
     displayAsset(emotionMeterSad);
     displayTextbox(emotionMeterQuestion);
-  }
-  else if (currentScreen == emotionMeterAnxious) {
     displayAsset(enterKey);
     displayAsset(arrowKey);
+  }
+  else if (currentScreen == emotionMeterAnxiousScreen) {
     displayAsset(emotionMeterAnxious);
     displayTextbox(emotionMeterQuestion);
-  }
-  else if (currentScreen == messageHappy) {
     displayAsset(enterKey);
+    displayAsset(arrowKey);
+  }
+  else if (currentScreen == messageHappyScreen) {
     displayAsset(messageBackground);
     displayTextbox(messageHappy1);
-  }
-  else if (currentScreen == messageMeh) {
     displayAsset(enterKey);
+  }
+  else if (currentScreen == messageMehScreen) {
     displayAsset(messageBackground);
     displayTextbox(messageMeh2);
-  }
-  else if (currentScreen == messageSad) {
     displayAsset(enterKey);
+  }
+  else if (currentScreen == messageSadScreen) {
     displayAsset(messageBackground);
     displayTextbox(messageSad3);
+    displayAsset(enterKey);
   }
-  else if (currentScreen == playAgain) {
+  else if (currentScreen == playAgainScreen) {
     displayAsset(keys);
     displayTextbox(resetGame);
   }
 }
 
-displayAsset(asset) {
+function displayAsset(asset) {
   image(assets[asset][file], assets[asset][assetX], assets[asset][assetY]);
 }
 
-displayTextbox(textbox) {
+function displayTextbox(textbox) {
   textSize(textboxes[textbox][size]);
   fill(textboxes[textbox][color]);
   text(textboxes[textbox][content], textboxes[textbox][textboxX], textboxes[textbox][textboxY]);
@@ -439,41 +439,104 @@ displayTextbox(textbox) {
 
 // Navigation interactions between screens (states)
 function keyPressed() {
-  // Interactions from anywhere in the program
-
-
   // Interactions for each screen (state)
-  if( currentScreen === playAgain)
-  if (keyCode === LEFT_ARROW) {
-    fillVal = 255;
-  } else if (keyCode === RIGHT_ARROW) {
-    fillVal = 0;
+  if (currentScreen === excitingNewsScreen) {                   // state 0
+    if (keyCode === ENTER) {
+      currentScreen = narrativeIntroductionScreen;
+    }
   }
-}
+  else if (currentScreen === narrativeIntroductionScreen) {     // state 1
+    if (keyCode === ENTER) {
+      currentScreen = chooseCaptionBrandishScreen;
+    }
+  }
+  else if (currentScreen === chooseCaptionBrandishScreen) {    // state 2
+    if (keyCode === LEFT_ARROW) {
+      currentScreen = chooseCaptionHeartfeltScreen;
+    }
+    else if (keyCode === RIGHT_ARROW) {
+      currentScreen = chooseCaptionBrandishScreen;
+    }
+    else if (keyCode === ENTER) {
+      currentScreen = captionBrandishScreen;
+    }
+  }
+  else if (currentScreen === chooseCaptionHeartfeltScreen) {   // state 3
+    if (keyCode === LEFT_ARROW) {
+      currentScreen = chooseCaptionHeartfeltScreen;
+    }
+    else if (keyCode === RIGHT_ARROW) {
+      currentScreen = chooseCaptionBrandishScreen;
+    }
+    else if (keyCode === ENTER) {
+      currentScreen = captionHeartfeltScreen;
+    }
+  }
+  else if (currentScreen === captionBrandishScreen) {         // state 4
+    if (keyCode === ENTER) {
+      currentScreen = lotsOfAttentionScreen;
+    }
+  }
+  else if (currentScreen === captionHeartfeltScreen) {        // state 5
+    if (keyCode === ENTER) {
+      currentScreen = noAttentionScreen;
+    }
+  }
+  else if (currentScreen === lotsOfAttentionScreen) {         // state 6
+    if (keyCode === ENTER) {
+      currentScreen = chooseIGStoryBrandishScreen;
+    }
+  }
+  else if (currentScreen === noAttentionScreen) {             // state 7
+    if (keyCode === ENTER) {
+      currentScreen = deletePostOptionScreen;
+    }
+  }
+  else if (currentScreen === chooseIGStoryBrandishScreen) {   // state 8
+    if (keyCode === LEFT_ARROW) {
+      currentScreen = chooseIGStoryBrandishScreen;
+    }
+    else if (keyCode === RIGHT_ARROW) {
+      currentScreen = chooseIGStoryHeartfeltScreen;
+    }
+    else if (keyCode === ENTER) {
+      currentScreen = brandishIGStoryScreen;
+    }
+  }
+else if (currentScreen === chooseIGStoryHeartfeltScreen) {     // state 9
+    if (keyCode === LEFT_ARROW) {
+      currentScreen = chooseIGStoryBrandishScreen;
+    }
+    else if (keyCode === RIGHT_ARROW) {
+      currentScreen = chooseIGStoryHeartfeltScreen;
+    }
+    else if (keyCode === ENTER) {
+      currentScreen = heartfeltIGStoryScreen;
+    }
+  }
+else if (currentScreen === brandishIGStoryScreen) {     // state 11
+    if (keyCode === ENTER) {
+      currentScreen = sadCommentScreen;
+    }
+  }
+else if (currentScreen === heartfeltIGStoryScreen) {     // state 12
+    if (keyCode === ENTER) {
+      currentScreen = happyCommentScreen;
+    }
+  }
 
-function mousePressed() {
-if( currentScreen === playAgain ) { 
-    currentScreen = excitingNews;
-  }
+
+
 }
 
 function keyTyped() {
-  if( key === '1' ) {
-  	drawFunction = drawOne;
-  }
-  else if( key === '2' ) {
-  	drawFunction = drawTwo;
-  }
-  else if( key === '3' ) {
-  	drawFunction = drawThree;
-  }
-  else if( key === '4' ) {
-  	drawFunction = drawFour;
-  }
-  else if( key === '5' ) {
-  	drawFunction = drawFive;
-  }
-  else if( key === 's' ) {
-    drawFunction = drawSplash;
+  //Interaction for state 10
+  if (currentScreen === deletePostOptionScreen) {     // state 10
+    if (key === 'y') {
+      currentScreen = deletePostOptionYesScreen;
+    }
+    else if (key === 'n') {
+      currentScreen = deletePostOptionNoScreen;
+    }
   }
 }
