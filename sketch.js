@@ -71,7 +71,7 @@ let captionHeartfeltScreen = 5;
 let lotsOfAttentionScreen = 6;
 let noAttentionScreen = 7;
 let chooseIGStoryBrandishScreen = 8;
-let chooseIGstoryHeartfeltScreen = 9;
+let chooseIGStoryHeartfeltScreen = 9;
 let deletePostOptionScreen = 10;
 let brandishIGStoryScreen = 11;
 let heartfeltIGStoryScreen = 12;
@@ -159,7 +159,7 @@ textboxes[hook] = [
   "You have some exciting news to share to everyone and now is the perfect time to do it…",
   standardTextColor, standardTextSize, 412, 117];
 textboxes[narrativeIntro] = [
-  "Congratulations! You finally got that one car you’ve been wanting pretty much your whole life.  It’s not brand new but you’ve worked so hard to get it…You should be proud! What if you put it on your Instagram? ",
+  "Congratulations! You finally got that one car you’ve been wanting\npretty much your whole life.  It’s not brand new but you’ve worked\nso hard to get it…You should be proud!\n\nWhat if you put it on your Instagram? ",
   standardTextColor, standardTextSize, 972, 363];
 textboxes[chooseCaptionPost] = [
   "Choose a photo and a caption for your post!",
@@ -316,7 +316,7 @@ display = function() {
     displayAsset(arrowKey);
   }
   else if (currentScreen == chooseIGStoryHeartfeltScreen) {
-    displayAsset(chooseIGstoryHeartfelt);
+    displayAsset(chooseIGStoryHeartfelt);
     displayTextbox(chooseCaptionStory);
     displayAsset(enterKey);
     displayAsset(arrowKey);
@@ -439,6 +439,11 @@ function displayTextbox(textbox) {
 
 // Navigation interactions between screens (states)
 function keyPressed() {
+  // Interaction from anywhere in the program
+  if (keyCode === ESCAPE) {
+    currentScreen = excitingNewsScreen;
+  }
+
   // Interactions for each screen (state)
   if (currentScreen === excitingNewsScreen) {                   // state 0
     if (keyCode === ENTER) {
@@ -524,7 +529,11 @@ else if (currentScreen === heartfeltIGStoryScreen) {     // state 12
       currentScreen = happyCommentScreen;
     }
   }
-
+else if (currentScreen === sadCommentScreen) {     // state 13
+    if (keyCode === ENTER) {
+      currentScreen = emotionMeterScreen;
+    }
+  }
 
 
 }
