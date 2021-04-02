@@ -157,7 +157,7 @@ var textboxes = [[]];
 
 textboxes[hook] = [
   "You have some exciting news to share to everyone and now is the perfect time to do it…",
-  standardTextColor, standardTextSize, 412, 117];
+  standardTextColor, 30, 403, 117];
 textboxes[narrativeIntro] = [
   "Congratulations! You finally got that one car you’ve been wanting\npretty much your whole life.  It’s not brand new but you’ve worked\nso hard to get it…You should be proud!\n\nWhat if you put it on your Instagram? ",
   standardTextColor, standardTextSize, 972, 363];
@@ -211,16 +211,16 @@ textboxes[emotionMeterQuestion] = [
   standardTextColor, standardTextSize, 298, 237];
 textboxes[messageHappy1] = [
   "That’s great! Always remember that you have the power to show the true you, even on social media. Stay genuine and continue to inspire others!",
-  standardTextColor, 60, 463, 358];
+  standardTextColor, 40, 463, 358];
 textboxes[messageMeh2] = [
   "I’m sorry to hear that. Maybe this is a good reminder to reflect on how you want to be perceived through what you post online. If you stay true to yourself, maybe you’ll feel better next time!",
-  standardTextColor, 60, 463, 358];
+  standardTextColor, 40, 463, 358];
 textboxes[messageSad3] = [
   "Sometimes, we need to just get off social media every once in a while. Life is more than just Instagram likes and online attention. At the end of the day you are doing things for YOU!",
-  standardTextColor, 60, 463, 358];
+  standardTextColor, 40, 463, 358];
 textboxes[resetGame] = [
   "Click anywhere to play again!",
-  standardTextColor, 70, 960, 448];
+  standardTextColor, 55, 960, 448];
 
 /// p5.js /////////////////////////////////////////////////////
 
@@ -519,22 +519,121 @@ else if (currentScreen === chooseIGStoryHeartfeltScreen) {     // state 9
       currentScreen = heartfeltIGStoryScreen;
     }
   }
-else if (currentScreen === brandishIGStoryScreen) {     // state 11
+else if (currentScreen === brandishIGStoryScreen) {           // state 11
     if (keyCode === ENTER) {
       currentScreen = sadCommentScreen;
     }
   }
-else if (currentScreen === heartfeltIGStoryScreen) {     // state 12
+else if (currentScreen === heartfeltIGStoryScreen) {          // state 12
     if (keyCode === ENTER) {
       currentScreen = happyCommentScreen;
     }
   }
-else if (currentScreen === sadCommentScreen) {     // state 13
+else if (currentScreen === sadCommentScreen) {                // state 13
     if (keyCode === ENTER) {
       currentScreen = emotionMeterScreen;
     }
   }
-
+else if (currentScreen === happyCommentScreen) {              // state 14
+    if (keyCode === ENTER) {
+      currentScreen = emotionMeterScreen;
+    }
+  }
+else if (currentScreen === deletePostOptionYesScreen) {       // state 15
+    if (keyCode === ENTER) {
+      currentScreen = happyTextScreen;
+    }
+  }
+else if (currentScreen === deletePostOptionNoScreen) {        // state 16
+    if (keyCode === ENTER) {
+      currentScreen = happyCommentTwoScreen;
+    }
+  }
+else if (currentScreen === happyTextScreen) {                 // state 17
+    if (keyCode === ENTER) {
+      currentScreen = emotionMeterScreen;
+    }
+  }
+else if (currentScreen === happyCommentTwoScreen) {           // state 18
+    if (keyCode === ENTER) {
+      currentScreen = emotionMeterScreen;
+    }
+  }
+else if (currentScreen === emotionMeterScreen) {              // state 19
+    if (keyCode === ENTER) {
+      currentScreen = emotionMeterMehScreen;
+    }
+    else if (keyCode === LEFT_ARROW) {
+      currentScreen = emotionMeterMehScreen;
+    }
+    else if (keyCode === RIGHT_ARROW) {
+      currentScreen = emotionMeterMehScreen;
+    }
+  }
+else if (currentScreen === emotionMeterMehScreen) {           // state 20
+    if (keyCode === ENTER) {
+      currentScreen = messageMehScreen;
+    }
+    else if (keyCode === LEFT_ARROW) {
+      currentScreen = emotionMeterHappyScreen;
+    }
+    else if (keyCode === RIGHT_ARROW) {
+      currentScreen = emotionMeterSadScreen;
+    }
+  }
+else if (currentScreen === emotionMeterHappyScreen) {         // state 21
+    if (keyCode === ENTER) {
+      currentScreen = messageHappyScreen;
+    }
+    else if (keyCode === LEFT_ARROW) {
+      currentScreen = emotionMeterExcitedScreen;
+    }
+    else if (keyCode === RIGHT_ARROW) {
+      currentScreen = emotionMeterMehScreen;
+    }
+  }
+else if (currentScreen === emotionMeterExcitedScreen) {       // state 22
+    if (keyCode === ENTER) {
+      currentScreen = messageHappyScreen;
+    }
+    else if (keyCode === RIGHT_ARROW) {
+      currentScreen = emotionMeterHappyScreen;
+    }
+  }
+else if (currentScreen === emotionMeterSadScreen) {          // state 23
+    if (keyCode === ENTER) {
+      currentScreen = messageSadScreen;
+    }
+    else if (keyCode === LEFT_ARROW) {
+      currentScreen = emotionMeterMehScreen;
+    }
+    else if (keyCode === RIGHT_ARROW) {
+      currentScreen = emotionMeterAnxiousScreen;
+    }
+  }
+else if (currentScreen === emotionMeterAnxiousScreen) {       // state 24
+    if (keyCode === ENTER) {
+      currentScreen = messageSadScreen;
+    }
+    else if (keyCode === LEFT_ARROW) {
+      currentScreen = emotionMeterSadScreen;
+    }
+  }
+else if (currentScreen === messageHappyScreen) {           // state 25
+    if (keyCode === ENTER) {
+      currentScreen = playAgainScreen;
+    }
+  }
+else if (currentScreen === messageMehScreen) {           // state 26
+    if (keyCode === ENTER) {
+      currentScreen = playAgainScreen;
+    }
+  }
+else if (currentScreen === messageSadScreen) {           // state 27
+    if (keyCode === ENTER) {
+      currentScreen = playAgainScreen;
+    }
+  }
 
 }
 
@@ -547,5 +646,11 @@ function keyTyped() {
     else if (key === 'n') {
       currentScreen = deletePostOptionNoScreen;
     }
+  }
+}
+
+function mouseClicked() {
+if(currentScreen === playAgainScreen) {                 // state 28
+    currentScreen = excitingNewsScreen;
   }
 }
