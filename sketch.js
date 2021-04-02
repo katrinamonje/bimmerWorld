@@ -49,16 +49,16 @@ let standardTextColor = color(#ffffff);
 // Indexes for properties of assets (images)
 
 let file = 0;
-let xAssets = 1;
-let yAssets = 2; 
+let assetX = 1;
+let assetY = 2; 
 
 // Indexes for properties of textboxes (textcopies)
 
 let content = 0;
 let color = 1;
 let size = 2
-let xTextboxes = 3;
-let yTextboxes = 4;
+let textboxX = 3;
+let textboxY = 4;
 
 // Indexes for all screens (states)
 
@@ -272,31 +272,189 @@ function draw() {
 
 // Displays each state (screen)
 display = function() {
-  if (currentScreen === ) {
-    displayAsset();
-    displayTextbox();
+  if (currentScreen == excitingNews) {
+    displayAsset(enterKey);
+    displayAsset(selfie);
+    displayTextbox(hook);
   }
-  else if( currentScreen === ) {
-
+  else if (currentScreen == NarrativeIntroduction) {
+    displayAsset(enterKey);
+    displayAsset(keys);
+    displayTextbox(narrativeIntro);
+  }
+  else if (currentScreen == chooseCaptionBrandish) {
+    displayAsset(enterKey);
+    displayAsset(arrowKey);
+    displayAsset(chooseCaptionBrandish);
+    displayTextbox(chooseCaptionPost);
+  }
+  else if (currentScreen == chooseCaptionHeartfelt) {
+    displayAsset(enterKey);
+    displayAsset(arrowKey);
+    displayAsset(chooseCaptionHeartfelt);
+    displayTextbox(chooseCaptionPost);
+  }
+  else if (currentScreen == captionHeartfelt) {
+    displayAsset(enterKey);
+    displayAsset(captionHeartfelt);
+    displayTextbox(greatChoice);
+  }
+  else if (currentScreen == lotsOfAttention) {
+    displayAsset(enterKey);
+    displayAsset(notifications);
+    displayTextbox(notifications);
+  }
+  else if (currentScreen == noAttention) {
+    displayAsset(enterKey);
+    displayAsset(noNotifications);
+    displayTextbox(tooCheesy);
+  }
+  else if (currentScreen == chooseIGStoryBrandish) {
+    displayAsset(enterKey);
+    displayAsset(arrowKey);
+    displayAsset(chooseIGStoryBrandish);
+    displayTextbox(chooseCaptionStory);
+  }
+  else if (currentScreen == chooseIGstoryHeartfelt) {
+    displayAsset(enterKey);
+    displayAsset(arrowKey);
+    displayAsset(chooseIGstoryHeartfelt);
+    displayTextbox(chooseCaptionStory);
+  }
+  else if (currentScreen == deletePostOption) {
+    displayAsset(yKey);
+    displayAsset(nKey);
+    displayAsset(deletePostOption);
+    displayTextbox(deletePostQuestion);
+    displayTextbox(deletePostAnswers);
+  }
+  else if (currentScreen == brandishIGStory) {
+    displayAsset(enterKey);
+    displayAsset(brandishIGStory);
+    displayTextbox(finallyDreamCar);
+  }
+  else if (currentScreen == heartfeltIGStory) {
+    displayAsset(enterKey);
+    displayAsset(heartfeltIGStory);
+    displayTextbox(finallyHardWork);
+  }
+  else if (currentScreen == sadComment) {
+    displayAsset(enterKey);
+    displayAsset(sadComment);
+    displayTextbox(storyResponseSad);
+  }
+  else if (currentScreen == happyComment) {
+    displayAsset(enterKey);
+    displayAsset(happyComment);
+    displayTextbox(storyResponseHappy);
+  }
+  else if (currentScreen == deletePostOptionYes) {
+    displayAsset(enterKey);
+    displayAsset(deletePostOption);
+    displayTextbox(cringe);
+  }
+  else if (currentScreen == deletePostOptionNo) {
+    displayAsset(enterKey);
+    displayAsset(deletePostOption);
+    displayTextbox(keepPost);
+  }
+  else if (currentScreen == happyText) {
+    displayAsset(enterKey);
+    displayAsset(happyText);
+    displayTextbox(textResponseHappy);
+  }
+  else if (currentScreen == happyCommentTwo) {
+    displayAsset(enterKey);
+    displayAsset(happyCommentTwo);
+    displayTextbox(commentResponseHappy);
+  }
+  else if (currentScreen == emotionMeter) {
+    displayAsset(enterKey);
+    displayAsset(arrowKey);
+    displayAsset(emotionMeter);
+    displayTextbox(emotionMeterQuestion);
+  }
+  else if (currentScreen == emotionMeterMeh) {
+    displayAsset(enterKey);
+    displayAsset(arrowKey);
+    displayAsset();
+    displayTextbox(emotionMeterQuestion);
+  }
+  else if (currentScreen == emotionMeterHappy) {
+    displayAsset(enterKey);
+    displayAsset(arrowKey);
+    displayAsset(emotionMeterHappy);
+    displayTextbox(emotionMeterQuestion);
+  }
+  else if (currentScreen == emotionMeterExcited) {
+    displayAsset(enterKey);
+    displayAsset(arrowKey);
+    displayAsset(emotionMeterExcited);
+    displayTextbox(emotionMeterQuestion);
+  }
+  else if (currentScreen == emotionMeterSad) {
+    displayAsset(enterKey);
+    displayAsset(arrowKey);
+    displayAsset(emotionMeterSad);
+    displayTextbox(emotionMeterQuestion);
+  }
+  else if (currentScreen == emotionMeterAnxious) {
+    displayAsset(enterKey);
+    displayAsset(arrowKey);
+    displayAsset(emotionMeterAnxious);
+    displayTextbox(emotionMeterQuestion);
+  }
+  else if (currentScreen == messageHappy) {
+    displayAsset(enterKey);
+    displayAsset(messageBackground);
+    displayTextbox(messageHappy1);
+  }
+  else if (currentScreen == messageMeh) {
+    displayAsset(enterKey);
+    displayAsset(messageBackground);
+    displayTextbox(messageMeh2);
+  }
+  else if (currentScreen == messageSad) {
+    displayAsset(enterKey);
+    displayAsset(messageBackground);
+    displayTextbox(messageSad3);
+  }
+  else if (currentScreen == playAgain) {
+    displayAsset(keys);
+    displayTextbox(resetGame);
   }
 }
 
+displayAsset(asset) {
+  image(assets[asset][file], assets[asset][assetX], assets[asset][assetY]);
+}
 
-
+displayTextbox(textbox) {
+  textSize(textboxes[textbox][size]);
+  fill(textboxes[textbox][color]);
+  text(textboxes[textbox][content], textboxes[textbox][textboxX], textboxes[textbox][textboxY]);
+}
 
 
 
 // Navigation interactions between screens (states)
 function keyPressed() {
+  // Interactions from anywhere in the program
 
-}
 
-function keyReleased() {
-
+  // Interactions for each screen (state)
+  if( currentScreen === playAgain)
+  if (keyCode === LEFT_ARROW) {
+    fillVal = 255;
+  } else if (keyCode === RIGHT_ARROW) {
+    fillVal = 0;
+  }
 }
 
 function mousePressed() {
-
+if( currentScreen === playAgain ) { 
+    currentScreen = excitingNews;
+  }
 }
 
 function keyTyped() {
@@ -317,11 +475,5 @@ function keyTyped() {
   }
   else if( key === 's' ) {
     drawFunction = drawSplash;
-  }
-}
-
-function mousePressed() {
-  if( drawFunction === drawSplash ) { 
-    drawFunction = drawInstructions;
   }
 }
